@@ -12,6 +12,7 @@
 |-------|------|------|--------|
 | AI 情报采集 | [`ai-intel/`](./ai-intel/) | 自动采集、过滤、整理 AI/Agent 领域最新动态，输出 Daily Digest 到 Obsidian | 4 |
 | 科研写作助手 | [`research-writing/`](./research-writing/) | 面向本科/研究生的论文写作全流程辅助，支持头脑风暴、章节写作、LaTeX 输出 | 1 |
+| 论文插图生成 | [`docpic-prompt.md`](./docpic-prompt.md) | 输入论文文案，自动判断图类型并生成 Gemini（Nano Banana）专用英文图片 prompt | 1 |
 
 ---
 
@@ -26,8 +27,9 @@ JS_Skills/
 │   ├── ai-filter-rank.md            ← /ai-filter-rank 过滤评分命令
 │   ├── ai-classify-digest.md        ← /ai-classify-digest 生成简报命令
 │   └── ai-research.md               ← /ai-research 深度研究命令
-└── research-writing/                ← 科研写作 Skill
-    └── research-writing.md          ← /research-writing 论文写作命令
+├── research-writing/                ← 科研写作 Skill
+│   └── research-writing.md          ← /research-writing 论文写作命令
+└── docpic-prompt.md                 ← /docpic-prompt 论文插图生成命令
 ```
 
 ---
@@ -58,6 +60,12 @@ C:\Users\<用户名>\.claude\commands\
 ```
 .claude/commands/
 └── research-writing.md
+```
+
+**docpic-prompt（单文件 skill）：**
+```
+.claude/commands/
+└── docpic-prompt.md
 ```
 
 复制完成后，在 Claude Code 中输入 `/` 即可看到对应命令。
@@ -93,8 +101,25 @@ C:\Users\<用户名>\.claude\commands\
 
 ---
 
+### 论文插图生成（docpic-prompt）
+
+面向建筑学硕士论文的 AI 插图 prompt 生成工具。输入一段论文文案，自动判断图类型（轴测图、理论框架图、空间行为图、设计策略概念图等），输出一条 Gemini（Nano Banana）专用英文 prompt，附中文说明。
+
+风格锁定：素雅技术插图风，暖灰 + 冷蓝色板，米白背景，手绘质感线稿，匿名人物剪影，标注引线 + 图例框。
+
+工作流：英文首次生成 → 确认质量 → 再 prompt 将文案改为中文。
+
+```
+/docpic-prompt
+```
+
+→ 详见 [`docpic-prompt.md`](./docpic-prompt.md)
+
+---
+
 ## 更新记录
 
 | 日期 | 变更内容 |
 |------|---------|
 | 2026-04-17 | 初始建立仓库，迁移 ai-intel（4条命令）、新增 research-writing |
+| 2026-04-22 | 新增 docpic-prompt：建筑学论文插图 Gemini prompt 生成 skill |
