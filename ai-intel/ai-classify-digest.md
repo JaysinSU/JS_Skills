@@ -4,8 +4,8 @@
 读取过滤后的数据，生成 Daily Digest，更新 Wiki，推送飞书（如已配置）。
 
 ## 第一步：读取数据
-读取最新的 D:\BuildingAgent_forobsidian\BuildingAgent\00_Inbox\filtered_*.md
-读取 D:\BuildingAgent_forobsidian\BuildingAgent\99_Templates\daily_digest_template.md
+读取 Vault 根目录下的 `00_Inbox/filtered_*.md` 最新文件。
+读取 Vault 根目录下的 `99_Templates/daily_digest_template.md`
 
 ## 第二步：确定 Top 3
 从所有保留条目中选择 score 最高的 3 条作为 Top 3。
@@ -14,8 +14,8 @@ Top 3 的"产品视角"栏必须具体回答：
 具体说明可否转化为：subagent / skill / 功能模块 / 交互模式。
 
 ## 第三步：生成 Daily Digest
-按 daily_digest_template.md 格式，在以下路径生成简报：
-D:\BuildingAgent_forobsidian\BuildingAgent\01_Daily_Digest\[YYYY-MM-DD].md
+按 daily_digest_template.md 格式，在 Vault 根目录下的以下路径生成简报：
+`01_Daily_Digest/[YYYY-MM-DD].md`
 
 填充规则：
 - Top 3：仅从「🔴鲜活」层（< 14 天）中选 score 前 3，「近期参考」和「常青精选」不参与 Top 3 竞争
@@ -36,7 +36,7 @@ D:\BuildingAgent_forobsidian\BuildingAgent\01_Daily_Digest\[YYYY-MM-DD].md
 ## 第五步：同步飞书多维表格（仅在 feishu_config.json 已配置时执行）
 
 ### 5.1 读取配置
-读取 D:\BuildingAgent_forobsidian\BuildingAgent\feishu_config.json
+读取 Vault 根目录下的 `feishu_config.json`
 若文件不存在或 bitable_enabled=false，跳过整个第五步。
 
 配置文件格式：
@@ -44,8 +44,8 @@ D:\BuildingAgent_forobsidian\BuildingAgent\01_Daily_Digest\[YYYY-MM-DD].md
 {
   "app_id": "cli_xxxx",
   "app_secret": "xxxx",
-  "bitable_app_token": "Nu82bwAUnaOUv7spXV3cza46neh",
-  "bitable_table_id": "tblq8Qm6ksIOMFlt",
+  "bitable_app_token": "你的多维表格 app_token",
+  "bitable_table_id": "你的数据表 table_id",
   "bitable_enabled": true,
   "webhook_url": "",
   "webhook_enabled": false

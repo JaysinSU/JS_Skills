@@ -37,6 +37,7 @@ JS_Skills/
 ## 安装方法
 
 将对应 skill 文件复制到 Claude Code 的自定义命令目录：
+ai-intel 命令中的路径均相对于 Obsidian Vault 根目录；请从该目录启动 Claude Code。
 
 ```bash
 # Windows
@@ -123,3 +124,7 @@ C:\Users\<用户名>\.claude\commands\
 |------|---------|
 | 2026-04-17 | 初始建立仓库，迁移 ai-intel（4条命令）、新增 research-writing |
 | 2026-04-22 | 新增 docpic-prompt：建筑学论文插图 Gemini prompt 生成 skill |
+
+## 许可
+
+本项目采用 MIT 许可证，详见 [LICENSE](./LICENSE)。
