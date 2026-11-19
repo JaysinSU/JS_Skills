@@ -171,6 +171,8 @@ score = (hotness × 0.6) + (freshness × 0.4)
 
 ## 安装方法
 
+这些命令中的路径均相对于 Obsidian Vault 根目录；请从该目录启动 Claude Code。
+
 **第一步：复制命令文件**
 
 将本仓库中的 4 个 `.md` 文件复制到 Claude Code 自定义命令目录：

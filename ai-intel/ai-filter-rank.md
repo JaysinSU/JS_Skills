@@ -4,8 +4,8 @@
 读取 00_Inbox 中最新的 raw_*.md 文件，按 Core Brain 规则过滤，并评分排序。
 
 ## 第一步：读取数据
-读取 D:\BuildingAgent_forobsidian\BuildingAgent\00_Inbox\ 目录下最新的 raw_*.md 文件。
-读取 D:\BuildingAgent_forobsidian\BuildingAgent\weights.json 获取当前权重。
+读取 Vault 根目录下的 `00_Inbox/` 目录中最新的 raw_*.md 文件。
+读取 Vault 根目录下的 `weights.json` 获取当前权重。
 
 ## 第二步：过滤规则（强制执行，每条必须满足至少一项才保留）
 
@@ -74,8 +74,8 @@ score = (hotness × 0.6) + (freshness × 0.4)
 - score < 1.5 的条目 → 直接丢弃
 
 ## 输出格式
-将评分结果写入：
-D:\BuildingAgent_forobsidian\BuildingAgent\00_Inbox\filtered_[YYYY-MM-DD].md
+将评分结果写入 Vault 根目录下的：
+`00_Inbox/filtered_[YYYY-MM-DD].md`
 
 格式：
 ```

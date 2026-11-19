@@ -32,7 +32,7 @@
 
 ### 第四步：写入 Vault
 1. 研究报告写入：
-   D:\BuildingAgent_forobsidian\BuildingAgent\00_Inbox\research_[主题关键词]_[YYYY-MM-DD].md
+   `00_Inbox/research_[主题关键词]_[YYYY-MM-DD].md`
 2. 关键发现更新到对应 Wiki 笔记（追加，不覆盖）
 3. 若无对应 Wiki 笔记，按模板新建
 

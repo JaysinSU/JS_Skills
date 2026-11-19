@@ -4,9 +4,9 @@
 从多个信息源并行采集 AI/Agent 最新动态，输出到 Obsidian Vault 暂存区。
 
 ## 执行前准备
-1. 读取 D:\BuildingAgent_forobsidian\BuildingAgent\CLAUDE.md 了解 Vault 规范
-2. 读取 D:\BuildingAgent_forobsidian\BuildingAgent\03_Watchlist\ 下的所有文件，优先采集 Watchlist 中的对象
-3. 读取 D:\BuildingAgent_forobsidian\BuildingAgent\weights.json 了解当前权重偏好
+1. 读取 Vault 根目录下的 `CLAUDE.md` 了解 Vault 规范
+2. 读取 Vault 根目录下的 `03_Watchlist/` 中所有文件，优先采集 Watchlist 中的对象
+3. 读取 Vault 根目录下的 `weights.json` 了解当前权重偏好
 
 ## 采集任务（按顺序执行）
 
@@ -60,8 +60,8 @@
 每条记录包含：标题、来源平台、URL、发布时间。
 
 ## 输出格式
-将所有采集结果写入：
-D:\BuildingAgent_forobsidian\BuildingAgent\00_Inbox\raw_[YYYY-MM-DD].md
+将所有采集结果写入 Vault 根目录下的：
+`00_Inbox/raw_[YYYY-MM-DD].md`
 
 格式如下：
 ```
